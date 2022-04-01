@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../../src/logo.png';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
   return (
@@ -19,8 +20,8 @@ const Header = () => {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
+            <Nav className="ms-auto" id="menubar">
+              <CustomLink to="/">Home</CustomLink>
               <NavDropdown title="Men" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

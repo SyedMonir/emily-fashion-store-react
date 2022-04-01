@@ -1,0 +1,9 @@
+#menubar a {
+    text-decoration: none;
+    transition: all .3s;
+    font-weight: bold;
+}
+
+#menubar a:hover {
+    color: var(brand-clr);
+}
