@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Product.css';
 import { FaCartArrowDown } from 'react-icons/fa';
 import { BsFillCartCheckFill } from 'react-icons/bs';
+import { CartContext } from '../../App';
 
 const Product = ({ product }) => {
   const { id, title, price, description, category, image } = product;
   const [cartIcon, setCartIcon] = useState(false);
   const navigate = useNavigate();
-  const handleAddToCart = () => {
-    console.log('click');
-  };
+  const [cart, setCart, handleAddToCart] = useContext(CartContext);
+
   return (
     <div className="product col-md-4">
       <img onClick={() => navigate(`/product/${id}`)} src={image} alt={title} />
@@ -37,7 +37,7 @@ const Product = ({ product }) => {
             className="addToCart"
             onClick={() => {
               setCartIcon(!cartIcon);
-              handleAddToCart();
+              handleAddToCart(product);
             }}
           >
             {cartIcon ? <BsFillCartCheckFill /> : <FaCartArrowDown />}

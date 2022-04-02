@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../../src/logo.png';
 import { NavLink } from 'react-router-dom';
 import { FaCartArrowDown } from 'react-icons/fa';
+import { CartContext } from '../../App';
 
 const Header = () => {
+  const [cart] = useContext(CartContext);
   return (
     <>
       <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
@@ -70,13 +72,13 @@ const Header = () => {
               >
                 Contact
               </NavLink>
-              <NavLink to="/cart" className={'link position-relative'}>
+              <NavLink to="/shopping-cart" className={'link position-relative'}>
                 <FaCartArrowDown size={'1.3rem'} className="" />
                 <span
                   className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
                   style={{ left: '130%' }}
                 >
-                  9
+                  {cart.length}
                 </span>
               </NavLink>
             </Nav>
