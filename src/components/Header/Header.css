@@ -1,9 +1,21 @@
 #menubar a {
     text-decoration: none;
-    transition: all .3s;
-    font-weight: bold;
+    font-family: "Teko", sans-serif;
+    font-size: 1.1rem;
+    margin-left: 15px;
 }
 
 #menubar a:hover {
-    color: var(brand-clr);
+    color: #f74c70;
+}
+
+.link {
+    color: #fff;
+    transition: color ease-in-out 300ms;
+}
+
+
+.active-link {
+    transition: color ease-in-out 300ms;
+    color: #f74c70;
 }
