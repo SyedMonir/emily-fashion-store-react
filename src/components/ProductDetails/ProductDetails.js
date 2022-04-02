@@ -17,7 +17,6 @@ const ProductDetails = () => {
         setLoading(false);
       });
   }, [productID]);
-  console.log(productDetails);
   return (
     <>
       {loading ? (

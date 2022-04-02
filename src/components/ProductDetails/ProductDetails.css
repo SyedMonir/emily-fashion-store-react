@@ -5,6 +5,10 @@
     margin: 30px;
 }
 
+#product-details img {
+    width: 75%;
+}
+
 #product-details h2 {
     color: #222;
     margin-top: -0.2em;

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../../src/logo.png';
 import { NavLink } from 'react-router-dom';
+import { FaCartArrowDown } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -37,16 +38,6 @@ const Header = () => {
               >
                 Men
               </NavLink>
-              {/* <NavDropdown title="Men" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
               <NavLink
                 to="/women"
                 className={({ isActive }) =>
@@ -78,6 +69,15 @@ const Header = () => {
                 }
               >
                 Contact
+              </NavLink>
+              <NavLink to="/cart" className={'link position-relative'}>
+                <FaCartArrowDown size={'1.3rem'} className="" />
+                <span
+                  className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
+                  style={{ left: '130%' }}
+                >
+                  9
+                </span>
               </NavLink>
             </Nav>
           </Navbar.Collapse>
