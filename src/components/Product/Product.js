@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
 const Product = ({ product }) => {
-  const { title, price, description, category, image } = product;
+  const { id, title, price, description, category, image } = product;
+  const navigate = useNavigate();
   return (
     <div className="product col-md-4">
       <img src={image} alt={title} />
@@ -15,7 +17,13 @@ const Product = ({ product }) => {
         </h4>
         <p>
           {description.length > 45 ? description.slice(0, 45) : description}
-          <span className="read-more"> ..read more</span>
+          <span
+            onClick={() => navigate(`/product/${id}`)}
+            className="read-more"
+          >
+            {' '}
+            ..read more
+          </span>
         </p>
         <h5>{category}</h5>
       </div>
