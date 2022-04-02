@@ -14,7 +14,7 @@ const Product = ({ product }) => {
           <small>Price:</small> $<span>{price}</span>
         </h4>
         <p>
-          {description.length > 50 ? description.slice(0, 50) : description}
+          {description.length > 45 ? description.slice(0, 45) : description}
           <span className="read-more"> ..read more</span>
         </p>
         <h5>{category}</h5>

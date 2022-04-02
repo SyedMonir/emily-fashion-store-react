@@ -1,8 +1,9 @@
 #menubar a {
     text-decoration: none;
     font-family: "Teko", sans-serif;
-    font-size: 1.1rem;
-    margin-left: 15px;
+    font-size: 1rem;
+    margin-left: 20px;
+    text-transform: uppercase;
 }
 
 #menubar a:hover {

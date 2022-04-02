@@ -1,0 +1,26 @@
+#not-found {
+    background-color: #f3f4f6;
+    padding: 50px;
+}
+
+#not-found a {
+    background-color: #f74c70;
+    color: white;
+    text-decoration: none;
+}
+
+
+#not-found h1 {
+    font-weight: 800;
+}
+
+#not-found p {
+    color: gray;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+#not-found small {
+    color: gray;
+}

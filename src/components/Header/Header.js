@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="lg">
+    <>
+      <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -72,18 +72,18 @@ const Header = () => {
                 Accessories
               </NavLink>
               <NavLink
-                to="/contactus"
+                to="/contact"
                 className={({ isActive }) =>
                   isActive ? 'active-link' : 'link'
                 }
               >
-                Contact us
+                Contact
               </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </header>
+    </>
   );
 };
 
