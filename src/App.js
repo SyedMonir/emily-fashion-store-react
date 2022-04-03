@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Checkout from './components/Checkout/Checkout';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
@@ -14,7 +15,6 @@ function App() {
     const newShoppingCart = [...cart, product];
     setCart(newShoppingCart);
   };
-  console.log(cart);
   return (
     <CartContext.Provider value={[cart, setCart, handleAddToCart]}>
       <Header />
@@ -23,6 +23,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/product/:productID" element={<ProductDetails />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/men" element={<Home />} />
         <Route path="/women" element={<Home />} />
         <Route path="/kid" element={<Home />} />

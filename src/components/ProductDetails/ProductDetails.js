@@ -25,7 +25,7 @@ const ProductDetails = () => {
         <Container>
           <section id="product-details">
             <section className="row">
-              <figure className="col-md-6 ">
+              <figure className="col-md-6 text-center">
                 <img
                   className="img-fluid"
                   src={productDetails?.image}

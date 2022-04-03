@@ -75,8 +75,8 @@ const Header = () => {
               <NavLink to="/shopping-cart" className={'link position-relative'}>
                 <FaCartArrowDown size={'1.3rem'} className="" />
                 <span
-                  className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
-                  style={{ left: '130%' }}
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  // style={{ left: '130%' }}
                 >
                   {cart.length}
                 </span>
