@@ -10,16 +10,18 @@ const Products = () => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
       .then((data) => {
+        data.sort(() => 0.5 - Math.random());
         setProducts(data);
         setLoading(false);
       });
   }, []);
+
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
-        <section className="container row mx-auto">
+        <section className="container row mx-auto justify-content-center">
           {products.map((product) => (
             <Product key={product.id} product={product} />
           ))}

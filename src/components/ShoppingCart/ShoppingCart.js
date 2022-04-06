@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const ShoppingCart = () => {
   const [cart] = useContext(CartContext);
   const navigate = useNavigate();
+  // console.log(cart.length);
   return (
     <>
       <Container className="text-center">
@@ -46,13 +47,15 @@ const ShoppingCart = () => {
             </section>
           </section>
         ))}
-        <button
-          onClick={() => navigate(`/checkout`)}
-          style={{ backgroundColor: '#f74c70' }}
-          className="mt-5 py-2 px-3 text-uppercase border-0 text-white"
-        >
-          Check-out
-        </button>
+        {cart.length > 0 && (
+          <button
+            onClick={() => navigate(`/checkout`)}
+            style={{ backgroundColor: '#f74c70' }}
+            className="mt-5 rounded py-2 px-3 text-uppercase border-0 text-white"
+          >
+            Check-out
+          </button>
+        )}
       </Container>
     </>
   );

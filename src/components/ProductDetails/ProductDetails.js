@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import './ProductDetails.css';
 
@@ -24,7 +24,7 @@ const ProductDetails = () => {
       ) : (
         <Container>
           <section id="product-details">
-            <section className="row">
+            <section className="row align-items-center">
               <figure className="col-md-6 text-center">
                 <img
                   className="img-fluid"
@@ -41,6 +41,13 @@ const ProductDetails = () => {
                   <p>{productDetails?.description}</p>
                   <h5>{productDetails?.category}</h5>
                 </div>
+                <button
+                  onClick={() => Navigate(`/checkout`)}
+                  style={{ backgroundColor: '#f74c70' }}
+                  className="my-2 py-2 px-3 rounded text-uppercase border-0 text-white"
+                >
+                  BUY NOW
+                </button>
               </div>
             </section>
           </section>

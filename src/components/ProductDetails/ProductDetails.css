@@ -17,12 +17,12 @@
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     transition: all ease-in 100ms;
-    letter-spacing: 0.1em;
+    letter-spacing: 0..9em;
 }
 
 #product-details p {
     color: #777;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
 }
 
 #product-details span {
@@ -36,4 +36,12 @@
     letter-spacing: 0.05em;
     margin: 1.4em 0 0 0;
     text-transform: uppercase;
+}
+
+@media screen and (max-width:450px) {
+    #product-details {
+        padding: 10px;
+        margin: 5px;
+    }
+
 }

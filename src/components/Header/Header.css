@@ -4,6 +4,7 @@
     font-size: 1rem;
     margin-right: 20px;
     text-transform: uppercase;
+    padding: 5px 0;
 }
 
 #menubar a:hover {
@@ -19,4 +20,14 @@
 .active-link {
     transition: color ease-in-out 300ms;
     color: #f74c70;
+}
+
+.cart-length {
+    background-color: #f74c70;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+.cart:hover sup {
+    color: #fff;
 }

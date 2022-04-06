@@ -2,6 +2,7 @@ import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Checkout from './components/Checkout/Checkout';
+import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
@@ -28,7 +29,7 @@ function App() {
         <Route path="/women" element={<Home />} />
         <Route path="/kid" element={<Home />} />
         <Route path="/accessories" element={<Home />} />
-        <Route path="/contact" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </CartContext.Provider>
