@@ -5,6 +5,7 @@ import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Men from './components/Men/Men';
 import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
@@ -25,7 +26,7 @@ function App() {
         <Route path="/product/:productID" element={<ProductDetails />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/men" element={<Home />} />
+        <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Home />} />
         <Route path="/kid" element={<Home />} />
         <Route path="/accessories" element={<Home />} />

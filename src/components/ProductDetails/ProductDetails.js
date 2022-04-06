@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import './ProductDetails.css';
 
@@ -17,6 +17,8 @@ const ProductDetails = () => {
         setLoading(false);
       });
   }, [productID]);
+  document.title = `Emily - ${productDetails?.title}`;
+  // const a = useLocation();
   return (
     <>
       {loading ? (
@@ -42,7 +44,7 @@ const ProductDetails = () => {
                   <h5>{productDetails?.category}</h5>
                 </div>
                 <button
-                  onClick={() => Navigate(`/checkout`)}
+                  // onClick={() => Navigate(`/`)}
                   style={{ backgroundColor: '#f74c70' }}
                   className="my-2 py-2 px-3 rounded text-uppercase border-0 text-white"
                 >

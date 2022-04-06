@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useProducts from '../../hooks/useProducts';
 import Product from '../Product/Product';
 import Spinner from '../Spinner/Spinner';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((data) => {
-        data.sort(() => 0.5 - Math.random());
-        setProducts(data);
-        setLoading(false);
-      });
-  }, []);
+  const [products, loading] = useProducts();
 
   return (
     <>
