@@ -2,6 +2,18 @@
     color: #f74c70;
 }
 
-.registration button {
+.registration .submit-btn {
     background-color: #f74c70;
+}
+
+.registration .submit-btn:hover {
+    background-color: #f3345d;
+}
+
+.registration .submit-btn:focus {
+    background-color: #f1093b;
+}
+
+.registration button:focus {
+    box-shadow: none;
 }

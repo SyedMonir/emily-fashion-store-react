@@ -17,7 +17,7 @@ const ProductDetails = () => {
         setLoading(false);
       });
   }, [productID]);
-  document.title = `Emily - ${productDetails?.title}`;
+  document.title = `${productDetails?.title} - Emily Fashion Store`;
   // const a = useLocation();
   return (
     <>
